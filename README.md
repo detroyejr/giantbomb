@@ -19,6 +19,7 @@ At the time this package was created, these endpoints are covered:
 -   `gb_characters`
 -   `gb_reviews`
 -   `gb_platforms`
+-   `gb_franchises`
 
 API Key
 -------

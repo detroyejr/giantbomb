@@ -2,6 +2,7 @@
 
 export(gb_characters)
 export(gb_companies)
+export(gb_franchises)
 export(gb_games)
 export(gb_key)
 export(gb_platforms)
