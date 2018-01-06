@@ -1,0 +1,86 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+
+library(giantbomb)
+```
+
+[![Travis-CI Build Status](https://travis-ci.org/detroyejr/giantbomb.svg?branch=master)](https://travis-ci.org/detroyejr/giantbomb)
+
+The giantbomb package provides access to the [GiantBomb API] (https://www.giantbomb.com/api/) which gives information on video games, reviews, companies, and other related content.
+
+# Install
+
+Install the package using devtools.
+
+```{r, eval = FALSE}
+devtools::install_github("detroyejr/giantbomb")
+```
+
+At the time this package was created, these endpoints are covered:
+
+* `gb_search`
+* `gb_games`
+* `gb_companies`
+* `gb_characters`
+* `gb_reviews`
+* `gb_platforms`
+
+## API Key
+
+Before you can begin to use the giantbomb package, you will need to [sign up](https://www.giantbomb.com/signup/) to receive an api key. Once you login, your key will appead on the [main api page](https://www.giantbomb.com/api/).
+
+Once you have your key, you can either pass it as a string to the `api_key` function parameters or set the `GB_KEY` environoment variable.
+
+```{r, eval = FALSE}
+Sys.setenv("GB_KEY" = 'YOUR_API_KEY`)
+```
+
+The function `gb_key()` will look in the system environment for a variable with that name.
+
+## Examples
+
+### Basic Usage
+
+```{r}
+# Get list of games.
+gb_games(n = 10, field_list = c("date_added", "name"))
+
+# Get list of companies.
+gb_companies(n = 10, field_list = c("date_added", "name"))
+```
+
+### Filters and Sorting
+
+```{r}
+# Filter by name and sort by date_added.
+gb_games(
+  n = 10,
+  filter = "name:bioshock",
+  sort = "date_added:desc",
+  field_list = c("name", "date_added")
+  )
+
+# Filter companies by name and sort by date_added.
+gb_companies(
+  n = 10,
+  filter = "name:2k",
+  sort = "date_added:asc",
+  field_list = c("name", "date_added")
+  )
+```
+
+For more examples, look in the function documentation.
+
+## Contributing
+
+If you find any bugs, you can file an issue or create a pull request.
