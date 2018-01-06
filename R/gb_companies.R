@@ -37,11 +37,12 @@
 #'   Additionally, you may experience issues if too many queries are made every
 #'   second. Each function attempts to mitigate problems by using a delay after
 #'   each query (default is 30 seconds). You can set `delay` to 0 if you want to
-#'   try and get the information faster, but you may hit a captcha-wall.
+#'   get the information faster, but GiantBomb may begin to block your requests
+#'   if you do this too often.
 #'
 #'   You may also want to use the `user_agent` parameter to customize how your
-#'   queries are being received. Doing so can may minimize the possibility of
-#'   getting a captcha challenge.
+#'   queries are being received. Doing so can minimize the possibility of
+#'   getting a captcha challenges.
 #'
 #'   Each query returns a maximum of 100 results per request. In order to get
 #'   1000 results with a `limit` of 100, it would take 10 api requests.
