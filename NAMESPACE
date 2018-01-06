@@ -3,4 +3,5 @@
 export(gb_companies)
 export(gb_games)
 export(gb_key)
+export(gb_reviews)
 export(gb_search)
