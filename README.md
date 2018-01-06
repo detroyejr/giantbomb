@@ -1,6 +1,6 @@
 [![Travis-CI Build Status](https://travis-ci.org/detroyejr/giantbomb.svg?branch=master)](https://travis-ci.org/detroyejr/giantbomb)
 
-The giantbomb package provides access to the \[GiantBomb API\] (<https://www.giantbomb.com/api/>) which gives information on video games, reviews, companies, and other related content.
+The giantbomb package provides access to the [GiantBomb API](https://www.giantbomb.com/api/) which gives information on video games, reviews, companies, and other related content.
 
 Install
 =======
